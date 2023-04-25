@@ -17,7 +17,6 @@ class Config(object):
 app.config.from_object(Config)
 
 
-
 @app.route('/', strict_slashes=False)
 def index():
     """ Creating index page """
