@@ -20,7 +20,7 @@ app.config.from_object(Config)  # Load config class
 @app.route('/', strict_slashes=False)
 def index():
     """ Creating index page """
-    return render_template('0-index.html')
+    return render_template('1-index.html')
 
 
 if __name__ == '__main__':

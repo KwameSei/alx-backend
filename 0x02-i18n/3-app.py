@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """ Creating Flask application """
-from flask import Flask, render_template
-from flask_babel import Babel
-from flask import request
+from flask import Flask, render_template, request
+from flask_babel import Babel, gettext, get_locale
 
 app = Flask(__name__)
 babel = Babel(app)  # Initialize Babel
@@ -30,7 +29,7 @@ def get_locale():
 @app.route('/', strict_slashes=False)
 def index():
     """ Creating index page """
-    return render_template('2-index.html')
+    return render_template('3-index.html')
 
 
 if __name__ == '__main__':
