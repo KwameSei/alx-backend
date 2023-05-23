@@ -30,7 +30,6 @@ const displaySchoolValue = (schoolName) => {
       console.log(err);
       return;
     }
-    console.log(`${value}`);
   });
 };
 

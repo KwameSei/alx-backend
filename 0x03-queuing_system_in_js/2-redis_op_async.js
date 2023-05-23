@@ -22,17 +22,15 @@ const setNewSchool = (schoolName, value) => {
   });
 };
 
-const displaySchoolValue = (schoolName) => {
-  client.get(schoolName, (err, value) => {
-    console.log(value);
-
-    if(err) {
-      console.log(err);
-      return;
-    }
-    console.log(`${value}`);
-  });
-};
+async function  displaySchoolValue(schoolName){
+  try {
+    const value = await client.get(schoolName, (err, value) => {
+      console.log(value);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 displaySchoolValue('Holberton');
 setNewSchool('HolbertonSanFrancisco', '100');
